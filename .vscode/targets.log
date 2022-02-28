@@ -1,5 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make -C ./api
+# make[1]: Entering directory '/home/thome/C_REST_API--CLI/api'
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -7,7 +8,7 @@ make -C ./api
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Feb 27 21:23:09 2022
+# Make data base, printed on Sun Feb 27 22:04:01 2022
 
 # Variables
 
@@ -66,7 +67,7 @@ LIBFLAGS = -lcurl -ljson-c
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-82e8a537-8bfd-452f-b39c-b3a93d9935f8.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-e12801c2-191c-4d9d-a4a9-5df220b5fa4e.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -90,7 +91,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 LOGNAME = thome
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -166,9 +167,9 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2064, inode 99443): 7 files, no impossibilities.
+# . (device 2064, inode 99660): 6 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 6 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -180,8 +181,7 @@ all: api include/api.h
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Successfully updated.
+#  File has not been updated.
 
 .PHONY: clean fclean all re
 #  Implicit rule search has not been done.
@@ -190,16 +190,14 @@ all: api include/api.h
 
 # Not a target:
 src/main.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:09:36.5693132
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 api: libs/mongoose.o src/logger.o src/server_mongoose.o src/client_http_curl.o src/main.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-02-27 21:09:36.6893132
-#  File has been updated.
-#  Successfully updated.
+#  File does not exist.
+#  File has not been updated.
 #  recipe to execute (from 'Makefile', line 20):
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFLAGS)
 	
@@ -208,24 +206,22 @@ api: libs/mongoose.o src/logger.o src/server_mongoose.o src/client_http_curl.o s
 
 # Not a target:
 src/server_mongoose.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:09:36.4493132
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-27 20:57:53.2493132
+#  Last modified 2022-02-27 21:24:06.0593132
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/client_http_curl.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:09:36.5093132
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 fclean:
 #  Phony target (prerequisite of .PHONY).
@@ -238,9 +234,8 @@ fclean:
 # Not a target:
 libs/mongoose.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:09:36.3393132
-#  File has been updated.
-#  Successfully updated.
+#  File does not exist.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -264,20 +259,17 @@ clean:
 
 # Not a target:
 src/logger.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:09:36.3893132
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 include/api.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 20:57:53.2493132
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
- 
 # Load=15/1024=1%, Rehash=0, Collisions=0/40=0%
 # VPATH Search Paths
 
@@ -285,15 +277,19 @@ include/api.h:
 
 # No general ('VPATH' variable) search path.
 
+ 
+make[1]: *** No rule to make target 'libs/mongoose.o', needed by 'api'.  Stop.
+make: *** [Makefile:5: all] Error 2
+ 
 # strcache buffers: 1 (0) / strings = 22 / storage = 212 B / avg = 9 B
 # current buf: size = 8162 B / used = 212 B / count = 22 / avg = 9 B
 
-# strcache performance: lookups = 40 / hit rate = 45%
+# strcache performance: lookups = 39 / hit rate = 43%
 # hash-table stats:
-# Load=22/8192=0%, Rehash=0, Collisions=1/40=2%
-# Finished Make data base on Sun Feb 27 21:23:09 2022
+# Load=22/8192=0%, Rehash=0, Collisions=1/39=3%
+# Finished Make data base on Sun Feb 27 22:04:01 2022
 
-make -C ./cli
+# make[1]: Leaving directory '/home/thome/C_REST_API--CLI/api'
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -301,288 +297,7 @@ make -C ./cli
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Feb 27 21:23:09 2022
-
-# Variables
-
-# automatic
-<D = $(patsubst %/,%,$(dir $<))
-# automatic
-?F = $(notdir $?)
-# environment
-JABBA_HOME = /home/thome/.jabba
-# environment
-WSLENV = ELECTRON_RUN_AS_NODE/w:
-# default
-.SHELLFLAGS := -c
-# makefile (from 'Makefile', line 13)
-OBJ = $(SRC:.c=.o)
-# makefile (from 'Makefile', line 6)
-SRC = src/check_args.c src/count_methods.c src/show_cli.c src/main.c 
-# environment
-VSCODE_LOG_NATIVE = false
-# automatic
-?D = $(patsubst %/,%,$(dir $?))
-# automatic
-@D = $(patsubst %/,%,$(dir $@))
-# automatic
-@F = $(notdir $@)
-# makefile
-CURDIR := /home/thome/C_REST_API--CLI/cli
-# makefile
-SHELL = /bin/sh
-# makefile (from 'Makefile', line 4)
-RM = rm -fr
-# environment
-VSCODE_NLS_CONFIG = {"locale":"pt-br","availableLanguages":{"*":"pt-br"},"_languagePackId":"54c17d0348e5e6468065dc7b6e562127.pt-br","_translationsConfigFile":"/home/thome/.vscode-server/data/clp/54c17d0348e5e6468065dc7b6e562127.pt-br/tcf.json","_cacheRoot":"/home/thome/.vscode-server/data/clp/54c17d0348e5e6468065dc7b6e562127.pt-br","_resolvedLanguagePackCoreLocation":"/home/thome/.vscode-server/data/clp/54c17d0348e5e6468065dc7b6e562127.pt-br/f80445acd5a3dadef24aa209168452a3d97cc326","_corruptedFile":"/home/thome/.vscode-server/data/clp/54c17d0348e5e6468065dc7b6e562127.pt-br/corrupted.info","_languagePackSupport":true}
-# environment
-_ = /mnt/d/Microsoft VS Code/bin/code
-# makefile (from 'Makefile', line 3)
-CFLAGS = -g3
-# makefile (from 'Makefile', line 11)
-LIB_H = include/cli.h
-# makefile (from 'Makefile', line 1)
-MAKEFILE_LIST :=  Makefile
-# 'override' directive
-GNUMAKEFLAGS := 
-# environment
-XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
-# environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-LESSOPEN = | /usr/bin/lesspipe %s
-# environment
-VSCODE_CWD = /mnt/d/Microsoft VS Code
-# default
-MAKE_HOST := x86_64-pc-linux-gnu
-# environment
-PATH = /home/thome/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/bin/remote-cli:/home/thome/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Eclipse Foundation/jdk-11.0.12.7-hotspot/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/MinGW/bin:/mnt/c/Program Files/PuTTY/:/mnt/d/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Users/thoma/AppData/Local/Microsoft/WindowsApps:/mnt/d/Microsoft VS Code/bin:/snap/bin
-# environment
-VSCODE_LOG_STACK = false
-# environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-82e8a537-8bfd-452f-b39c-b3a93d9935f8.sock
-# default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
-# environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
-# automatic
-%F = $(notdir $%)
-# environment
-VSCODE_PIPE_LOGGING = true
-# environment
-PWD = /home/thome/C_REST_API--CLI
-# default
-.LOADED := 
-# environment
-WSL_INTEROP = /run/WSL/9_interop
-# environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
-# environment
-HOME = /home/thome
-# environment
-LESSCLOSE = /usr/bin/lesspipe %s %s
-# environment
-LOGNAME = thome
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
-# environment
-VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# automatic
-^D = $(patsubst %/,%,$(dir $^))
-# environment
-MAKELEVEL := 1
-# default
-MAKE = $(MAKE_COMMAND)
-# environment
-SHLVL = 1
-# makefile (from 'Makefile', line 2)
-CC = gcc
-# default
-MAKE_VERSION := 4.2.1
-# environment
-USER = thome
-# makefile
-.DEFAULT_GOAL := all
-# makefile (from 'Makefile', line 1)
-NAME = cli
-# automatic
-%D = $(patsubst %/,%,$(dir $%))
-# environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/thoma/.vscode/extensions/ms-vscode-remote.remote-wsl-0.64.2
-# default
-MAKE_COMMAND := make
-# default
-.VARIABLES := 
-# automatic
-*F = $(notdir $*)
-# makefile
-MAKEFLAGS = pqrRw
-# environment
-MFLAGS = -pqrRw
-# automatic
-*D = $(patsubst %/,%,$(dir $*))
-# automatic
-+D = $(patsubst %/,%,$(dir $+))
-# automatic
-+F = $(notdir $+)
-# default
-MAKEFILES := 
-# automatic
-<F = $(notdir $<)
-# environment
-LC_ALL = C
-# environment
-HOSTTYPE = x86_64
-# automatic
-^F = $(notdir $^)
-# default
-SUFFIXES := 
-# default
-.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
-# default
-.RECIPEPREFIX := 
-# environment
-LANG = C
-# environment
-TERM = xterm-256color
-# environment
-VSCODE_EXTHOST_WILL_SEND_SOCKET = true
-# environment
-WSL_DISTRO_NAME = Ubuntu
-# variable set hash-table stats:
-# Load=72/1024=7%, Rehash=0, Collisions=7/106=7%
-
-# Pattern-specific Variable Values
-
-# No pattern-specific variable values.
-
-# Directories
-
-# . (device 2064, inode 99444): 6 files, no impossibilities.
-
-# 6 files, no impossibilities in 1 directories.
-
-# Implicit Rules
-
-# No implicit rules.
-
-# Files
-
-cli: src/check_args.o src/count_methods.o src/show_cli.o src/main.o
-#  Implicit rule search has not been done.
-#  Last modified 2022-02-27 21:09:36.8993132
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 18):
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
-
-all: cli include/cli.h
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has been updated.
-#  Successfully updated.
-
-.PHONY: clean fclean all re
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-include/cli.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:00:15.7993132
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/main.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:09:36.8693132
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/show_cli.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:09:36.8293132
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/check_args.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:09:36.7393132
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:00:15.7993132
-#  File has been updated.
-#  Successfully updated.
-
-fclean: clean
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 30):
-	$(RM) $(NAME) $(OBJ)
-
-# Not a target:
-src/count_methods.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:09:36.7893132
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-.DEFAULT:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-re: fclean cli fclean all
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-
-clean:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 27):
-	$(RM) $(OBJ)
- 
-
-# files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=0/43=0%
-# VPATH Search Paths
-
-# No 'vpath' search paths.
-
-# No general ('VPATH' variable) search path.
-
-# strcache buffers: 1 (0) / strings = 20 / storage = 185 B / avg = 9 B
-# current buf: size = 8162 B / used = 185 B / count = 20 / avg = 9 B
-
-# strcache performance: lookups = 43 / hit rate = 53%
-# hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=1/43=2%
-# Finished Make data base on Sun Feb 27 21:23:09 2022
-
-# GNU Make 4.2.1
-# Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2016 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
-
-# Make data base, printed on Sun Feb 27 21:23:09 2022
+# Make data base, printed on Sun Feb 27 22:04:01 2022
 
 # Variables
 
@@ -635,7 +350,7 @@ PATH = /home/thome/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/b
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-82e8a537-8bfd-452f-b39c-b3a93d9935f8.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-e12801c2-191c-4d9d-a4a9-5df220b5fa4e.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -659,7 +374,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 LOGNAME = thome
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -725,7 +440,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
 # variable set hash-table stats:
-# Load=69/1024=7%, Rehash=0, Collisions=4/106=4%
+# Load=69/1024=7%, Rehash=0, Collisions=4/103=4%
 
 # Pattern-specific Variable Values
 
@@ -750,7 +465,7 @@ all:
 #  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
 # automatic
 # @ := all
 # automatic
@@ -768,7 +483,7 @@ all:
 # automatic
 # ? := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=4/20=20%
+# Load=8/32=25%, Rehash=0, Collisions=4/17=24%
 #  recipe to execute (from 'Makefile', line 5):
 	$(MAKE) -C $(API)
 	$(MAKE) -C $(CLI)
@@ -787,7 +502,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-27 21:07:40.1893132
+#  Last modified 2022-02-27 21:24:05.9293132
 #  File has been updated.
 #  Successfully updated.
 
@@ -822,19 +537,19 @@ clean:
 					$(MAKE) -C $(CLI) clean
 
 # files hash-table stats:
-# Load=8/1024=1%, Rehash=0, Collisions=0/27=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/28=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 18 / storage = 128 B / avg = 7 B
-# current buf: size = 8162 B / used = 128 B / count = 18 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 18 / storage = 129 B / avg = 7 B
+# current buf: size = 8162 B / used = 129 B / count = 18 / avg = 7 B
 
 # strcache performance: lookups = 36 / hit rate = 50%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=1/36=3%
-# Finished Make data base on Sun Feb 27 21:23:09 2022
+# Finished Make data base on Sun Feb 27 22:04:01 2022
 
  
