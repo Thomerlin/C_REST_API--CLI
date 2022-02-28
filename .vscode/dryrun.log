@@ -1,0 +1,22 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/thome/C_REST_API--CLI'
+make -C ./api
+make[1]: Entering directory '/home/thome/C_REST_API--CLI/api'
+gcc -Wall -Wextra -Werror   -c -o libs/mongoose.o libs/mongoose.c
+gcc -Wall -Wextra -Werror   -c -o src/logger.o src/logger.c
+gcc -Wall -Wextra -Werror   -c -o src/server_mongoose.o src/server_mongoose.c
+gcc -Wall -Wextra -Werror   -c -o src/client_http_curl.o src/client_http_curl.c
+gcc -Wall -Wextra -Werror   -c -o src/main.o src/main.c
+gcc -Wall -Wextra -Werror -o api libs/mongoose.o src/logger.o src/server_mongoose.o src/client_http_curl.o src/main.o -lcurl -ljson-c 
+mkdir -p ../logs
+make[1]: Leaving directory '/home/thome/C_REST_API--CLI/api'
+make -C ./cli
+make[1]: Entering directory '/home/thome/C_REST_API--CLI/cli'
+gcc -g3   -c -o src/check_args.o src/check_args.c
+gcc -g3   -c -o src/count_methods.o src/count_methods.c
+gcc -g3   -c -o src/show_cli.o src/show_cli.c
+gcc -g3   -c -o src/main.o src/main.c
+gcc -g3 -o cli src/check_args.o src/count_methods.o src/show_cli.o src/main.o
+make[1]: Leaving directory '/home/thome/C_REST_API--CLI/cli'
+make: Leaving directory '/home/thome/C_REST_API--CLI'
+ 
