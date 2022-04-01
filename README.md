@@ -1,6 +1,6 @@
 # Processo Seletivo 42 São Paulo: 42Labs 2ª edição
  
-### O projeto consiste em desenvolver uma REST API usando C e uma CLI (Command Line Interface).
+### O projeto consiste em desenvolver uma REST API  e uma CLI (Command Line Interface) usando Linguagem C.
 
 ## O que é necessário ter instalado para execução ?
 - <a href="https://curl.se/libcurl/c/libcurl-tutorial.html">LibCurl</a>
